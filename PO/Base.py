@@ -99,6 +99,8 @@ class Base(object):
         """
         WebDriverWait(self.driver, 5).until(lambda driver: driver.find_element_by_id(element_id).is_displayed())
 
+    # ===========================首页底部button============================
+
     def bottom_go_home_page(self):
         """
         到主页

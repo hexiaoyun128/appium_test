@@ -15,7 +15,7 @@ import unittest
 from appium import webdriver
 from config import DevicesList, DevicesDefault, AppDefault
 from time import sleep
-from PO import LoginPage, UserInfoPage, CompanyPage
+from PO import LoginPage
 PATH = lambda p: os.path.abspath(
     os.path.join(os.path.dirname(__file__), p)
 )
@@ -35,11 +35,6 @@ class Login(unittest.TestCase):
         # desired_caps["automationName"] = DevicesList[DevicesDefault]['automationName']
         desired_caps['app'] = PATH("../../apps/android/"+AppDefault)
         self.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
-
-        sleep(5)
-        company = CompanyPage(self.driver)
-        company.load_page_done()
-        company.select_company_by_name(config.company["name"], config.company["port"])
 
     def tearDown(self):
         self.driver.quit()

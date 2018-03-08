@@ -43,7 +43,9 @@ DevicesList = {
         "noReset": True,
     }
 }
+# 包名
 appPackage = "com.batar.productlibrary"
+# 启动类
 appActivity = "com.batar.productlibrary.Control.Start.Widget.StartActivity"
 # 默认机器
 DevicesDefault = "huawei"

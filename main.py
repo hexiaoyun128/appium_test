@@ -16,15 +16,15 @@ from result_operation import RunTest,result_operation
 
 
 suite = doctest.DocTestSuite()
+# 用例测试顺序
 for test_class in TEST_SEQUENCE:
     suite.addTest(unittest.makeSuite(test_class))
 # 上报到服务器
-up_server = True
+up_server = False
 if up_server:
     # 测试结果在对象中
 
     RunTest(suite, 1)
-
 
 else:
     # 直接打印结果

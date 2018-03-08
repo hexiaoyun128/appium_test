@@ -12,7 +12,6 @@ import test_case
 # 登录测试必须放在最前面
 TEST_SEQUENCE = [
     test_case.Login,
-    test_case.CompanyManage,
     test_case.Home
 
 ]
